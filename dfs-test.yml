@@ -28,7 +28,18 @@ spring:
     password: guest
     username: guest
     host: 220.231.216.85
-    
+  redis:
+    database: 0
+    host: 192.168.153.136
+    port: 6379
+    password:
+    saveExpires: 10800
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
 fdfs:
   http-protocol : http://
   res-host: 220.231.216.162
