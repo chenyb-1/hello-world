@@ -30,7 +30,7 @@ spring:
     host: 220.231.216.85
   redis:
     database: 0
-    host: 192.168.153.136
+    host: 220.231.216.85
     port: 6379
     password:
     saveExpires: 10800
