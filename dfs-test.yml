@@ -1,7 +1,9 @@
 server:
   port: 8989
-
+  
 spring:
+  application:
+    name: dfs
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:phoenix:hb-proxy-pub-wz9fbud7pc849l79g-001.hbase.rds.aliyuncs.com:2181
