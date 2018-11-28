@@ -2,6 +2,8 @@ server:
   port: 8686
 
 spring:
+  application:
+    name: thirdly
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:phoenix:hb-proxy-pub-wz9fbud7pc849l79g-001.hbase.rds.aliyuncs.com:2181
