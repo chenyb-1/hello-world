@@ -29,10 +29,10 @@ spring:
     port: 5672
     password: guest
     username: guest
-    host: 220.231.216.85
+    host: 192.168.153.136
   redis:
     database: 0
-    host: 220.231.216.85
+    host: 192.168.153.136
     port: 6379
     password:
     saveExpires: 10800
