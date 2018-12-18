@@ -35,7 +35,7 @@ spring:
     host: 192.168.153.136
     port: 6379
     password:
-    saveExpires: 10800
+    saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
     jedis:
       pool:
         max-active: 8
