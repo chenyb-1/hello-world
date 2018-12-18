@@ -41,7 +41,22 @@ spring:
         max-active: 8
         max-idle: 8
         min-idle: 0
-
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+                
 fdfs:
   http-protocol : http://
   res-host: 220.231.216.162
@@ -50,6 +65,7 @@ fdfs:
   pattern-path-prefix: group1/M00
   replace-path-prefix: /data/fastdfs_storage_data/data
   fdfs-server-same-api-server: true
+  fdfs-config-filename: fastdfs-client-test.properties
 
 logging:
   pattern:
