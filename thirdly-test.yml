@@ -25,3 +25,25 @@ spring:
       test-on-borrow: false
       test-on-return: false
       filter: stat,wall,log4j
+  rabbitmq:
+    host: 192.168.153.136  #220.231.216.85
+    username: guest
+    password: guest
+    port: 5672
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+fdfs:
+  url: http://220.231.216.162:8989
