@@ -47,3 +47,6 @@ spring:
                 port: 465
 fdfs:
   url: http://220.231.216.162:8989
+  
+dooogo:
+  url: http://192.168.0.33:8887 #http://smaster.dooogo.com
