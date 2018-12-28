@@ -6,7 +6,7 @@ spring:
     name: passenger
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:phoenix:hb-proxy-pub-wz9fbud7pc849l79g-001.hbase.rds.aliyuncs.com:2181
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
     driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
