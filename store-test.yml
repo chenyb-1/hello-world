@@ -4,10 +4,10 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://220.231.216.162:3306/ai_test?useUnicode=true&amp;characterEncoding=utf-8&useSSL=false&autoReconnect=true
-    username: dooogo
-    password: Dgkj*321
-    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
     druid:
       default-auto-commit: true
       initial-size: 5
