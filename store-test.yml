@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: collection
+    name: store
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
