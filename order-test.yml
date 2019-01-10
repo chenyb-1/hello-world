@@ -25,3 +25,4 @@ spring:
       test-on-borrow: false
       test-on-return: false
       filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
