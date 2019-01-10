@@ -25,6 +25,8 @@ spring:
       test-on-borrow: false
       test-on-return: false
       filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+      
   rabbitmq:
     host: 192.168.153.136  #220.231.216.85
     username: guest
