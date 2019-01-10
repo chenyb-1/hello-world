@@ -1,0 +1,75 @@
+spring:
+  application:
+    name: dfs
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-wz9e8v421hr1k3y40-001.hbase.rds.aliyuncs.com,hb-wz9e8v421hr1k3y40-002.hbase.rds.aliyuncs.com,hb-wz9e8v421hr1k3y40-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+  rabbitmq:
+    port: 5672
+    password: dgkj*^^866
+    username: dooogo
+    host: 47.107.246.165
+  redis:
+    database: 0
+    host: 47.107.246.165
+    port: 6379
+    password: dgkj988jff
+    saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+                
+fdfs:
+  http-protocol : http://
+  res-host: 220.231.216.44
+  storage-port: 80
+  file-suffix: jpg
+  pattern-path-prefix: group1/M00
+  replace-path-prefix: /data/fastdfs_storage_data/data
+  fdfs-server-same-api-server: false
+  fdfs-config-filename: fastdfs-client-prod.properties
+
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /home/www/java/dfs_log
+
+token-expired-time: 10800 #10800 = 3 * 60 * 60 --> 3小时
+
+dooogo:
+  url: http://smaster.dooogo.com
