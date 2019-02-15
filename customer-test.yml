@@ -1,1 +1,29 @@
 
+server:
+  port: 8787
+
+spring:
+  application:
+    name: customer
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
