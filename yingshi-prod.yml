@@ -32,6 +32,11 @@ spring:
     username: dooogo
     password: dgkj*^^866
     port: 5672
+    publisher-confirms: true
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
   mail:
     host: smtp.exmail.qq.com
     username: airflow@dooogo.com
