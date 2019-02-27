@@ -6,8 +6,8 @@ spring:
     name: marketing
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url:  jdbc:phoenix:thin:url=http://47.106.184.205:8765;serialization=PROTOBUF
-    driver-class-name: org.apache.phoenix.queryserver.client.Driver
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
     druid:
@@ -19,8 +19,12 @@ spring:
       time-between-eviction-runs-millis: 6000
       min-evictable-idle-time-millis: 30000
       validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
       filter: stat,wall,log4j
       connection-properties: phoenix.force.index=false
+
+     
