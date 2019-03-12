@@ -47,6 +47,9 @@ spring:
     username: airflow@dooogo.com
     password: Dgkj889966
     default-encoding: UTF-8
+    tousername:
+      - chenyb@dooogo.com
+      - xierx@dooogo.com
     properties:
       mail:
         smtp:
