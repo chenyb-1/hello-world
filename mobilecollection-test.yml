@@ -1,0 +1,69 @@
+server:
+  port: 8782
+
+spring:
+  application:
+    name: mobilecollection
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 1
+      min-idle: 1
+      max-active: 100
+      max-wait: 6000
+      time-between-eviction-runs-millis: 90000
+      min-evictable-idle-time-millis: 1800000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 100
+      test-while-idle: false
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+  rabbitmq:
+    port: 5672
+    password: dooogotsmq
+    username: dooogo
+    host: 220.231.216.85
+  redis:
+    database: 0
+    host: 192.168.153.139
+    port: 6379
+    password: 
+    saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    tousername: 
+      - chenyb@dooogo.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+                
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /var/logs/pro_api/
+
+dooogo:
+  url: http://192.168.0.33:8887 #http://smaster.dooogo.com
