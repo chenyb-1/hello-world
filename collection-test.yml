@@ -26,6 +26,11 @@ spring:
       test-on-return: false
       filter: stat,wall,log4j
       connection-properties: phoenix.force.index=false
+  rabbitmq:
+    port: 5672
+    password: dooogotsmq
+    username: dooogo
+    host: 220.231.216.85
   redis:
     database: 0
     host: 192.168.153.137
