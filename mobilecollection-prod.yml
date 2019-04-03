@@ -1,0 +1,72 @@
+server:
+  port: 8782
+  tomcat:
+    max-connections: 5000
+    max-threads: 1000
+    accept-count: 1000
+    max-http-post-size: -1
+spring:
+  application:
+    name: mobilecollection
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-proxy-pub-wz9e8v421hr1k3y40-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz9e8v421hr1k3y40-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz9e8v421hr1k3y40-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 1
+      min-idle: 1
+      max-active: 100
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 100
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+  rabbitmq:
+    port: 5672
+    password: dgkj*^^866
+    username: dooogo
+    host: 47.107.246.165
+  redis:
+    database: 0
+    host: 39.108.122.131
+    port: 6379
+    password: Dgkjv566
+    saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    tousername:
+      - chenyb@dooogo.com
+      - xierx@dooogo.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /var/log/api/
+  level:
+    root: ERROR
