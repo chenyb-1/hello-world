@@ -1,10 +1,5 @@
 server:
   port: 8782
-  tomcat:
-    max-connections: 5000
-    max-threads: 1000
-    accept-count: 1000
-    max-http-post-size: -1
 spring:
   application:
     name: mobilecollection
@@ -64,9 +59,3 @@ spring:
                 class: javax.net.ssl.SSLSocketFactory
                 fallback: false
                 port: 465
-logging:
-  pattern:
-    console: "%d [%t] %-5p %c - %m%n"
-  path: /var/log/api/
-  level:
-    root: ERROR
