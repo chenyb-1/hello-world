@@ -28,9 +28,9 @@ spring:
       connection-properties: phoenix.force.index=false
       
   rabbitmq:
-    host: 192.168.153.136  #220.231.216.85
-    username: guest
-    password: guest
+    host: 192.168.153.139  #220.231.216.85
+    username: admin
+    password: admin
     port: 5672
   mail:
     host: smtp.exmail.qq.com
