@@ -32,7 +32,16 @@ spring:
     username: dooogo
     password: dgkj*^^866
     port: 5672
-        
+  redis:
+    database: 0
+    host: 47.107.246.165
+    port: 6379
+    password: dgkj988jff
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
   mail:
     host: smtp.exmail.qq.com
     username: airflow@dooogo.com
