@@ -32,6 +32,16 @@ spring:
     username: guest
     password: guest
     port: 5672
+  redis:
+    database: 0
+    host: 220.231.216.85
+    port: 6379
+    password: dgkj321ff
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
   mail:
     host: smtp.exmail.qq.com
     username: airflow@dooogo.com
