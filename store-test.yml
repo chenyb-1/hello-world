@@ -33,9 +33,9 @@ spring:
     host: 220.231.216.85
   redis:
     database: 0
-    host: 192.168.153.139
+    host: 220.231.216.85
     port: 6379
-    password: 
+    password: dgkj321ff
     saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
     jedis:
       pool:
@@ -45,9 +45,9 @@ spring:
         max-wait: -1
   redis-one:
     database: 0
-    host: 192.168.153.139
+    host: 220.231.216.85
     port: 6379
-    password: 
+    password: dgkj321ff
     saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
     jedis:
       pool:
