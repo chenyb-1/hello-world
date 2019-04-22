@@ -42,41 +42,16 @@ spring:
         max-active: 8
         max-idle: 8
         min-idle: 0
-  mail:
-    host: smtp.exmail.qq.com
-    username: airflow@dooogo.com
-    password: Dgkj889966
-    default-encoding: UTF-8
-    tousername:
-      - chenyb@dooogo.com
-      - xierx@dooogo.com
-    properties:
-      mail:
-        smtp:
-          auth: true
-          mail:
-            smtp:
-              socketFactory:
-                class: javax.net.ssl.SSLSocketFactory
-                fallback: false
-                port: 465
-                
-fdfs:
-  http-protocol : http://
-  res-host: 220.231.216.44
-  storage-port: 80
-  file-suffix: jpg
-  pattern-path-prefix: group1/M00
-  replace-path-prefix: /data/fastdfs_storage_data/data
-  fdfs-server-same-api-server: false
-  fdfs-config-filename: fastdfs-client-prod.properties
+        max-wait: -1
+  redis-one:
+    database: 0
+    host: 39.108.122.131
+    port: 6379
+    password: Dgkjv566
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
 
-logging:
-  pattern:
-    console: "%d [%t] %-5p %c - %m%n"
-  path: /home/www/java/dfs_log
-
-token-expired-time: 10800 #10800 = 3 * 60 * 60 --> 3小时
-
-dooogo:
-  url: http://smaster.dooogo.com
