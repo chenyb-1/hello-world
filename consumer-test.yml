@@ -1,0 +1,82 @@
+server:
+  port: 8989
+  
+spring:
+  application:
+    name: consumer
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-proxy-pub-wz99g439bjkv750dg-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz99g439bjkv750dg-003.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 30
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 30
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+      
+  rabbitmq:
+    port: 5672
+    password: dooogotsmq
+    username: dooogo
+    host: 220.231.216.85
+  redis:
+    database: 0
+    host: 220.231.216.85
+    port: 6379
+    password: dgkj321ff
+    saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    tousername:
+      - chenyb@dooogo.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+                
+fdfs:
+  http-protocol : http://
+  res-host: 220.231.216.162
+  storage-port: 80
+  file-suffix: jpg
+  pattern-path-prefix: group1/M00
+  replace-path-prefix: /data/fastdfs_storage_data/data
+  fdfs-server-same-api-server: true
+  fdfs-config-filename: fastdfs-client-test.properties
+
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /home/www/java/dfs_log
+
+token-expired-time: 10800 #10800 = 3 * 60 * 60 --> 3小时
+
+dooogo:
+  url: http://192.168.0.33:8887 #http://smaster.dooogo.com
