@@ -63,7 +63,7 @@ spring:
                 
 fdfs:
   http-protocol : http://
-  res-host: 220.231.216.162
+  res-host: 120.25.166.170
   storage-port: 80
   file-suffix: jpg
   pattern-path-prefix: group1/M00
