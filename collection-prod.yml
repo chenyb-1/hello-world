@@ -6,7 +6,7 @@ spring:
     name: collection
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:phoenix:hb-proxy-pub-wz9e8v421hr1k3y40-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz9e8v421hr1k3y40-002.hbase.rds.aliyuncs.com,hb-proxy-pub-wz9e8v421hr1k3y40-003.hbase.rds.aliyuncs.com:2181
+    url: jdbc:phoenix:hb-proxy-pub-wz92gqavi1x3vxchf-master2-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master1-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master3-001.hbase.rds.aliyuncs.com:2181
     driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
