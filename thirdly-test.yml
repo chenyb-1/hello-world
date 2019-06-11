@@ -28,13 +28,13 @@ spring:
       connection-properties: phoenix.force.index=false
       
   rabbitmq:
-    host: 220.231.216.85
+    host: 47.106.184.205
     username: dooogo
     password: dooogotsmq
     port: 5672
   redis:
     database: 0
-    host: 220.231.216.85
+    host: 47.106.184.205
     port: 6379
     password: dgkj321ff
     jedis:
