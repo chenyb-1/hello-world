@@ -31,10 +31,10 @@ spring:
     port: 5672
     password: dooogotsmq
     username: dooogo
-    host: 220.231.216.85
+    host: 47.106.184.205
   redis:
     database: 0
-    host: 220.231.216.85
+    host: 47.106.184.205
     port: 6379
     password: dgkj321ff
     saveExpires: 259200   # 3*24*60*60 三天的时间【防止出错，不然都是直接删除】
@@ -63,7 +63,7 @@ spring:
                 
 fdfs:
   http-protocol : http://
-  res-host: 120.25.166.170
+  res-host: 39.108.8.108
   storage-port: 80
   file-suffix: jpg
   pattern-path-prefix: group1/M00
