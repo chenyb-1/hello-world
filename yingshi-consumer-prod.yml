@@ -58,4 +58,4 @@ spring:
                 fallback: false
                 port: 465
 fdfs:
-  url: http://220.231.216.44:8989
+  url: http://api.dooogo.com
