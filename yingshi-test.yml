@@ -29,8 +29,8 @@ spring:
       
   rabbitmq:
     host: 47.106.184.205
-    username: guest
-    password: guest
+    username: dooogo
+    password: dooogotsmq
     port: 5672
   redis:
     database: 0
@@ -58,7 +58,7 @@ spring:
                 fallback: false
                 port: 465
 fdfs:
-  url: http://220.231.216.162:8989
+  url: http://smaster.dooogo.com
   
 dooogo:
   url: http://smaster.dooogo.com
