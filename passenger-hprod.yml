@@ -6,7 +6,7 @@ spring:
     name: passenger
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url:  jdbc:phoenix:thin:url=http://47.106.184.205:8765;serialization=PROTOBUF
+    url:  jdbc:phoenix:thin:url=http://hb-wz92gqavi1x3vxchf-proxy-phoenix-pub.hbase.rds.aliyuncs.com:8765;serialization=PROTOBUF
     driver-class-name: org.apache.phoenix.queryserver.client.Driver
     username:
     password:
