@@ -83,3 +83,7 @@ token-expired-time: 10800 #10800 = 3 * 60 * 60 --> 3小时
 
 dooogo:
   url: http://smaster.dooogo.com
+post:
+  server:
+    url: http://120.25.166.170
+    count: 3
