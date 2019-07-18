@@ -82,5 +82,5 @@ dooogo:
   url: http://smaster.dooogo.com
 post:
   server:
-    url: http://39.108.8.108
-    count: 1
+    url: http://120.25.166.170
+    count: 3
