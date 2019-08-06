@@ -41,6 +41,17 @@ spring:
         max-active: 8
         max-idle: 8
         min-idle: 0
+  redis-primary:
+    database: 0
+    host: 47.106.184.205
+    port: 6379
+    password: dgkj321ff
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
   mail:
     host: smtp.exmail.qq.com
     username: airflow@dooogo.com
