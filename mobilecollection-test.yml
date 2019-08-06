@@ -41,6 +41,7 @@ spring:
         max-active: 8
         max-idle: 8
         min-idle: 0
+        max-wait: -1
   redis-primary:
     database: 0
     host: 47.106.184.205
