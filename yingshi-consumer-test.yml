@@ -1,1 +1,64 @@
 
+server:
+  port: 8788
+  
+spring:
+  application:
+    name: yingshi-consumer
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-proxy-pub-wz92gqavi1x3vxchf-master2-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master1-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master3-001.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+      
+  rabbitmq:
+    host: 47.106.184.205
+    username: dooogo
+    password: dooogotsmq
+    port: 5672
+  redis:
+    database: 0
+    host: 47.106.184.205
+    port: 6379
+    password: dgkj321ff
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  mail:
+    host: smtp.exmail.qq.com
+    username: airflow@dooogo.com
+    password: Dgkj889966
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          mail:
+            smtp:
+              socketFactory:
+                class: javax.net.ssl.SSLSocketFactory
+                fallback: false
+                port: 465
+fdfs:
+  url: http://api.test.dooogo.com
+  app-id: ze46zpZ5Bx7gawa83ivbOcdULek2jS3j
+  app-secret: qhuY6sdgHO7OT0TLfAkIPSD4PvY7bAJT
