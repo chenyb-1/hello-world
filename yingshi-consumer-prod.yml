@@ -59,3 +59,5 @@ spring:
                 port: 465
 fdfs:
   url: http://api.dooogo.com
+  app-id: 04743153b0b6491482a033d995c60405
+  app-secret: 465548d64003a2af58a53a21f581455c
