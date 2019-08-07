@@ -46,8 +46,11 @@ spring:
   mail:
     host: smtp.exmail.qq.com
     username: airflow@dooogo.com
-    password: Dgkj889966
+    password: Dgkj567%^&
     default-encoding: UTF-8
+    tousername:
+      - chenyb@dooogo.com
+      - xierx@dooogo.com
     properties:
       mail:
         smtp:
@@ -58,7 +61,11 @@ spring:
                 class: javax.net.ssl.SSLSocketFactory
                 fallback: false
                 port: 465
+
 fdfs:
   url: http://api.test.dooogo.com
   app-id: ze46zpZ5Bx7gawa83ivbOcdULek2jS3j
   app-secret: qhuY6sdgHO7OT0TLfAkIPSD4PvY7bAJT
+  
+dooogo:
+  url: http://api.test.dooogo.com
