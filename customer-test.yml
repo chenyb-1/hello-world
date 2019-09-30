@@ -7,7 +7,7 @@ spring:
     name: customer
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:phoenix:hb-wz944wbx5ao116609-master1-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master2-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master3-001.hbase.rds.aliyuncs.com:2181
+    url: jdbc:phoenix:hb-proxy-pub-wz944wbx5ao116609-master1-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz944wbx5ao116609-master2-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz944wbx5ao116609-master3-001.hbase.rds.aliyuncs.com:2181
     driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
