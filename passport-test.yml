@@ -3,7 +3,7 @@ spring:
     name: passport
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:phoenix:hb-wz944wbx5ao116609-master1-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master2-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master3-001.hbase.rds.aliyuncs.com:2181
+    url: jdbc:phoenix:hb-proxy-pub-wz944wbx5ao116609-master1-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz944wbx5ao116609-master2-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz944wbx5ao116609-master3-001.hbase.rds.aliyuncs.com:2181
     driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
@@ -34,13 +34,7 @@ spring:
         max-active: 8
         max-idle: 8
         min-idle: 0
-      
-server:
-  tomcat:
-    max-connections: 1000
-    max-threads: 200
-    accept-count: 200
-    max-http-post-size: -1      
+          
 passport-expired-second: 86000
 passport-encrypt-key: To be or not to be, that is a question.The time of life is short ; to spend that shortness basely, it would be too long .
 exception-notice-phone: 15394469873
