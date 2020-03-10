@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: passport
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-wz944wbx5ao116609-master1-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master2-001.hbase.rds.aliyuncs.com,hb-wz944wbx5ao116609-master3-001.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+  redis:
+    database: 0
+    host: 47.106.184.205
+    port: 6379
+    password: dgkj321ff
+    saveExpires: 86010   
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+      
+server:
+  tomcat:
+    max-connections: 1000
+    max-threads: 200
+    accept-count: 200
+    max-http-post-size: -1      
+passport-expired-second: 86000
+passport-encrypt-key: To be or not to be, that is a question.The time of life is short ; to spend that shortness basely, it would be too long .
+exception-notice-phone: 15394469873
