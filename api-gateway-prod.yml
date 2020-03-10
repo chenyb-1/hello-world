@@ -1,9 +1,4 @@
-server:
-  tomcat:
-    max-connections: 5000
-    max-threads: 1000
-    accept-count: 1000
-    max-http-post-size: -1
+
 zuul:
   #全部服务忽略敏感头(全部服务都可以传递cookie)
   sensitive-headers: 
