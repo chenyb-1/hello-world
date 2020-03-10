@@ -1,15 +1,10 @@
-server:
-  tomcat:
-    max-connections: 5000
-    max-threads: 1000
-    accept-count: 1000
-    max-http-post-size: -1
+
 spring:
   application:
     name: passport
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:phoenix:hb-wz92gqavi1x3vxchf-master2-001.hbase.rds.aliyuncs.com,hb-wz92gqavi1x3vxchf-master1-001.hbase.rds.aliyuncs.com,hb-wz92gqavi1x3vxchf-master3-001.hbase.rds.aliyuncs.com:2181
+    url: jdbc:phoenix:hb-proxy-pub-wz92gqavi1x3vxchf-master2-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master1-001.hbase.rds.aliyuncs.com,hb-proxy-pub-wz92gqavi1x3vxchf-master3-001.hbase.rds.aliyuncs.com:2181
     driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
     username:
     password:
@@ -54,4 +49,4 @@ logging:
 
 passport-expired-second: 600
 passport-encrypt-key: To be or not to be, that is a question.The time of life is short ; to spend that shortness basely, it would be too long .
-exception-notice-phone: 15060790407,15394469873
+exception-notice-phone: 15394469873
