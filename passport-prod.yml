@@ -1,0 +1,57 @@
+server:
+  tomcat:
+    max-connections: 5000
+    max-threads: 1000
+    accept-count: 1000
+    max-http-post-size: -1
+spring:
+  application:
+    name: passport
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:phoenix:hb-wz92gqavi1x3vxchf-master2-001.hbase.rds.aliyuncs.com,hb-wz92gqavi1x3vxchf-master1-001.hbase.rds.aliyuncs.com,hb-wz92gqavi1x3vxchf-master3-001.hbase.rds.aliyuncs.com:2181
+    driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+    username:
+    password:
+    druid:
+      default-auto-commit: true
+      initial-size: 5
+      min-idle: 5
+      max-active: 100
+      max-wait: 6000
+      time-between-eviction-runs-millis: 6000
+      min-evictable-idle-time-millis: 30000
+      validation-query: SELECT 1
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 100
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filter: stat,wall,log4j
+      connection-properties: phoenix.force.index=false
+  rabbitmq:
+    port: 5672
+    password: dgkj*^^866
+    username: dooogo
+    host: 47.107.246.165
+  redis:
+    database: 0
+    host: 47.107.246.165
+    port: 6379
+    password: dgkj988jff
+    saveExpires: 3600
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /var/log/api
+#  level:
+#    root: ERROR
+
+passport-expired-second: 600
+passport-encrypt-key: To be or not to be, that is a question.The time of life is short ; to spend that shortness basely, it would be too long .
+exception-notice-phone: 15060790407,15394469873
