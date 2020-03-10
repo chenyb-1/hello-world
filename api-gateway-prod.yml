@@ -1,0 +1,51 @@
+server:
+  tomcat:
+    max-connections: 5000
+    max-threads: 1000
+    accept-count: 1000
+    max-http-post-size: -1
+zuul:
+  #全部服务忽略敏感头(全部服务都可以传递cookie)
+  sensitive-headers: 
+  host:
+    max-per-route-connections: 1000
+    max-total-connections: 1000
+    connect-timeout-millis: 100000
+    socket-timeout-millis: 100000
+  semaphore:
+    max-semaphores: 5000
+management:
+  security:
+    enabled: false    
+ribbon:
+  ReadTimeout: 100000
+  SocketTimeout: 100000
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 202000
+logging:
+  pattern:
+    console: "%d [%t] %-5p %c - %m%n"
+  path: /var/log/api
+#  level:
+#    root: ERROR
+spring:
+  redis:
+    database: 0
+    host: 47.107.246.165
+    port: 6379
+    password: dgkj988jff
+    saveExpires: 180
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 15MB
